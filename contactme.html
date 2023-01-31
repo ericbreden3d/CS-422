@@ -15,13 +15,33 @@
             <button class="navbutton">Contact Me</button>
         </div>
         <div id="contactbody" class="flex-container">
-            <form class="form">
-                
-                <input type="text" class="contactfield">
-                <input type="text" class="contactfield">
-                <input type="text" class="contactfield">
-                
-            </form>
+            <div id="contactbox" class="flex-container">
+                <p id="contact-title">Contact</p>
+                <form class="form" onsubmit="
+                    var inputs = document.getElementsByClassName('contactfield');
+                    for (input of inputs) {
+                        if (input.value == '') {
+                            alert('Please fill in all fields');
+                            return;
+                        }
+                    }
+                    alert('Message sent! I will get back to you as soon as possible.')
+                    ">
+                    <div class="fieldbox">
+                        <p>Name</p>
+                        <input id="namefield" type="text" class="contactfield">
+                    </div>    
+                    <div class="fieldbox">
+                        <p>Email</p>
+                        <input id="emailfield" type="text" class="contactfield">
+                    </div> 
+                    <div class="fieldbox">
+                        <p>Message</p>
+                        <textarea id="messagebox" class="contactfield" rows="5" cols="60" name="text"></textarea>
+                    </div> 
+                    <button id="submit-button">Send</button>
+                </form>
+            </div>
         </div>
     </body>
 </html>
