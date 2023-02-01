@@ -1,3 +1,4 @@
+/********************************* Global *****************************/
 body {
     margin: 0px;
     background-color: rgb(211, 226, 255);
@@ -7,6 +8,17 @@ body {
     display: flex;
 }
 
+@media screen and (max-width: 1000px) {
+    .flex-container {
+        flex-wrap: wrap
+    }
+
+    .grid-container {
+        grid-template-columns: auto;
+    }
+}
+
+/***************************** Nav Bar *******************************/
 #navbar {
     justify-content: center;
     background-color: rgb(135, 199, 255);
@@ -35,6 +47,7 @@ button:active {
     background-color: rgb(105, 155, 199);
 }
 
+/************************** Home Page Content ***************************/
 .infobox {
     background-color: aliceblue;
     margin: 5px;
@@ -63,6 +76,7 @@ embed {
     width: 100%;
 }
 
+/***************** Design Project Page Content ********************/
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;
@@ -86,16 +100,7 @@ p {
 }
 
 
-@media screen and (max-width: 1000px) {
-    .flex-container {
-        flex-wrap: wrap
-    }
-
-    .grid-container {
-        grid-template-columns: auto;
-    }
-}
-
+/********************* Contact Page Content ************************/
 #contactbody {
     display: flex;
     justify-content: center;
@@ -107,10 +112,9 @@ p {
     margin: 30px;
     padding: 20px;
     background-color: rgb(135, 199, 255);
-    /* margin-left: 200px;
-    margin-right: 200px; */
     min-width: 200px;
-    width: 40%
+    width: 40%;
+    border-radius: 13px;
 }
 
 #contact-title {
@@ -144,7 +148,6 @@ p {
     height: 100px;
     max-width: 90%;
     min-width: 90%;
-    /* resize: none; */
 }
 
 #submit-button {
